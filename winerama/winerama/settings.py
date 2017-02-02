@@ -42,6 +42,9 @@ INSTALLED_APPS = (
     'registration',
 )
 
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,9 +59,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'winerama.urls'
 
 LOGIN_REDIRECT_URL = '/reviews/review/user'
-
-ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
-REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 
 TEMPLATES = [
     {
